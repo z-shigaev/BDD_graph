@@ -151,23 +151,19 @@
               </item>
               <item>
                <layout class="QGridLayout" name="gridLayout_3">
-                <item row="2" column="1">
-                 <widget class="QDoubleSpinBox" name="dSB_coeff1">
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label15">
                   <property name="maximumSize">
                    <size>
-                    <width>129</width>
-                    <height>30</height>
+                    <width>130</width>
+                    <height>20</height>
                    </size>
                   </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QDoubleSpinBox" name="dSB_max1">
-                  <property name="maximumSize">
-                   <size>
-                    <width>129</width>
-                    <height>30</height>
-                   </size>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string> Максимум</string>
                   </property>
                  </widget>
                 </item>
@@ -197,22 +193,6 @@
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0">
-                 <widget class="QLabel" name="label15">
-                  <property name="maximumSize">
-                   <size>
-                    <width>130</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(255, 255, 255);</string>
-                  </property>
-                  <property name="text">
-                   <string> Максимум</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="2" column="0">
                  <widget class="QLabel" name="label16">
                   <property name="maximumSize">
@@ -228,6 +208,45 @@
                    <string> Коэффициент</string>
                   </property>
                  </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QDoubleSpinBox" name="dSB_max1">
+                  <property name="maximumSize">
+                   <size>
+                    <width>129</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QDoubleSpinBox" name="dSB_coeff1">
+                  <property name="maximumSize">
+                   <size>
+                    <width>129</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_step1">
+                  <property name="maximumSize">
+                   <size>
+                    <width>130</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string> Шаг</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QDoubleSpinBox" name="dSB_step1"/>
                 </item>
                </layout>
               </item>
@@ -254,7 +273,7 @@
                   <item>
                    <layout class="QGridLayout" name="gridLayout_4">
                     <item row="0" column="0">
-                     <widget class="QLabel" name="label_2">
+                     <widget class="QLabel" name="l_arg1">
                       <property name="maximumSize">
                        <size>
                         <width>47</width>
@@ -270,7 +289,7 @@
                      </widget>
                     </item>
                     <item row="0" column="1">
-                     <widget class="QDoubleSpinBox" name="doubleSpinBox">
+                     <widget class="QDoubleSpinBox" name="dSB_arg1">
                       <property name="minimumSize">
                        <size>
                         <width>130</width>
@@ -286,7 +305,7 @@
                      </widget>
                     </item>
                     <item row="1" column="0">
-                     <widget class="QLabel" name="label_3">
+                     <widget class="QLabel" name="l_val_1">
                       <property name="maximumSize">
                        <size>
                         <width>47</width>
@@ -516,16 +535,6 @@
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="1">
-                 <widget class="QDoubleSpinBox" name="dSB_min2">
-                  <property name="maximumSize">
-                   <size>
-                    <width>129</width>
-                    <height>30</height>
-                   </size>
-                  </property>
-                 </widget>
-                </item>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label24">
                   <property name="maximumSize">
@@ -558,6 +567,16 @@
                   </property>
                  </widget>
                 </item>
+                <item row="0" column="1">
+                 <widget class="QDoubleSpinBox" name="dSB_min2">
+                  <property name="maximumSize">
+                   <size>
+                    <width>129</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
                 <item row="2" column="0">
                  <widget class="QLabel" name="label26">
                   <property name="maximumSize">
@@ -573,6 +592,25 @@
                    <string> Коэффициент</string>
                   </property>
                  </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_step2">
+                  <property name="maximumSize">
+                   <size>
+                    <width>130</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string> Шаг</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QDoubleSpinBox" name="dSB_step2"/>
                 </item>
                </layout>
               </item>
@@ -841,8 +879,8 @@
               </item>
               <item>
                <layout class="QGridLayout" name="gridLayout_9">
-                <item row="2" column="1">
-                 <widget class="QDoubleSpinBox" name="dSB_coeff3">
+                <item row="0" column="1">
+                 <widget class="QDoubleSpinBox" name="dSB_min3">
                   <property name="maximumSize">
                    <size>
                     <width>129</width>
@@ -861,29 +899,13 @@
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="1">
-                 <widget class="QDoubleSpinBox" name="dSB_min3">
+                <item row="2" column="1">
+                 <widget class="QDoubleSpinBox" name="dSB_coeff3">
                   <property name="maximumSize">
                    <size>
                     <width>129</width>
                     <height>30</height>
                    </size>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QLabel" name="label34">
-                  <property name="maximumSize">
-                   <size>
-                    <width>130</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(255, 255, 255);</string>
-                  </property>
-                  <property name="text">
-                   <string> Минимум</string>
                   </property>
                  </widget>
                 </item>
@@ -918,6 +940,41 @@
                    <string> Коэффициент</string>
                   </property>
                  </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label34">
+                  <property name="maximumSize">
+                   <size>
+                    <width>130</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string> Минимум</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_step3">
+                  <property name="maximumSize">
+                   <size>
+                    <width>130</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string> Шаг </string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QDoubleSpinBox" name="dSB_step3"/>
                 </item>
                </layout>
               </item>
