@@ -18,8 +18,10 @@ class Layout(QVBoxLayout):
         plt.style.use("seaborn-dark")
 
         self.figure = plt.figure()
-        self.ax1= self.figure.add_subplot(111)
+        self.ax1 = self.figure.add_subplot(211)
         self.ax1.plot(x, y)
+        self.ax2 = self.figure.add_subplot(223)
+        self.ax3 = self.figure.add_subplot(224)
         self.canvas = FigureCanvas(self.figure)
         # self.toolbar = NavigationToolbar(self.canvas, root)
         # self.addWidget(self.toolbar)
@@ -28,12 +30,28 @@ class Layout(QVBoxLayout):
     def draw_graph(self, x1, y1):
         try:
             self.figure.clear()
-            self.ax2 = self.figure.add_subplot(111)
-            self.ax2.plot(x1, y1)
-            self.ax2.set_xlabel('Ось X')
-            self.ax2.set_ylabel('Ось Y')
+            #
+            self.ax1 = self.figure.add_subplot(211)
+            self.ax2 = self.figure.add_subplot(223)
+            self.ax3 = self.figure.add_subplot(224)
+            #
+            self.ax1.plot(x1, y1)
+            self.ax1.set_xlabel('Ось X', fontsize=10, labelpad=0)
+            self.ax1.set_ylabel('Ось Y', fontsize=10, labelpad=0)
+            self.ax1.spines['right'].set_visible(False)
+            self.ax1.grid(color='black', linewidth=1, linestyle='--')
+            #
+            #self.ax1.plot(x1, y1)
+            self.ax2.set_xlabel('Ось X', fontsize=10, labelpad=0)
+            self.ax2.set_ylabel('Ось Y', fontsize=10, labelpad=0)
             self.ax2.spines['right'].set_visible(False)
-            self.ax2.grid(color = 'black', linewidth = 1, linestyle = '--')
+            self.ax2.grid(color='black', linewidth=1, linestyle='--')
+            #
+            #self.ax1.plot(x1, y1)
+            self.ax3.set_xlabel('Ось X', fontsize=10, labelpad=0)
+            self.ax3.set_ylabel('Ось Y', fontsize=10, labelpad=0)
+            self.ax3.spines['right'].set_visible(False)
+            self.ax3.grid(color='black', linewidth=1, linestyle='--')
             self.canvas.draw()
         except Exception as error:
             print("Исключение " + str(error))

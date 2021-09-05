@@ -104,10 +104,34 @@ class MainWindow(QtWidgets.QMainWindow, main_win.Ui_MainWindow):
         pass
 
     def find_value2(self):
+        val = self.dSB_arg2.value()
+        i = 0
+        j = -1
+        for m in self.x2:
+            i = i + 1
+            if m == val:
+                j = i
+                break
+        if j == -1:
+            self.lE_val2.setText(" Ошибка! ")
+        else:
+            self.lE_val2.setText(str(self.y2[j-1]))
         print(2)
         pass
 
     def find_value3(self):
+        val = self.dSB_arg3.value()
+        i = 0
+        j = -1
+        for m in self.x3:
+            i = i + 1
+            if m == val:
+                j = i
+                break
+        if j == -1:
+            self.lE_val3.setText(" Ошибка! ")
+        else:
+            self.lE_val3.setText(str(self.y3[j-1]))
         print(3)
         pass
 
@@ -119,16 +143,24 @@ class MainWindow(QtWidgets.QMainWindow, main_win.Ui_MainWindow):
         self.g1_max = self.dSB_max1.value()
         self.g1_coeff = self.dSB_coeff1.value()
         self.g1_step = self.dSB_step1.value()
-        self.x = np.arange(self.g1_min, self.g1_max, self.g1_step)
-        self.y = []
-        for m in self.x:
-            a = m ** 2
-            self.y.append(a)
-        self.widget1_layout.draw_graph(self.x, self.y)
-        self.x1 = self.x
-        self.y1 = self.y
-        print(4)
-        pass
+        if self.g1_min == self.g1_max:
+            pass
+        else:
+            if self.g1_step == 0:
+                pass
+            else:
+                self.x = np.arange(self.g1_min, self.g1_max, self.g1_step)
+                self.y = []
+                for m in self.x:
+                    a = m ** 2
+                    self.y.append(a)
+                self.widget1_layout.draw_graph(self.x, self.y)
+                self.x1 = self.x
+                self.y1 = self.y
+                print(4)
+                pass
+
+
 
     def create_plot2(self):
         self.g2_par1 = self.dSB_par21.value()
@@ -138,16 +170,24 @@ class MainWindow(QtWidgets.QMainWindow, main_win.Ui_MainWindow):
         self.g2_max = self.dSB_max2.value()
         self.g2_coeff = self.dSB_coeff2.value()
         self.g2_step = self.dSB_step2.value()
-        self.x = np.arange(self.g2_min, self.g2_max, self.g2_step)
-        self.y = []
-        for m in self.x:
-            a = m ** 3
-            self.y.append(a)
-        self.widget2_layout.draw_graph(self.x, self.y)
-        self.x2 = self.x
-        self.y2 = self.y
-        print(5)
-        pass
+        if self.g2_min == self.g2_max:
+            pass
+        else:
+            if self.g2_step == 0:
+                pass
+            else:
+                self.x = np.arange(self.g2_min, self.g2_max, self.g2_step)
+                self.y = []
+                for m in self.x:
+                    a = m ** 3
+                    self.y.append(a)
+                self.widget2_layout.draw_graph(self.x, self.y)
+                self.x2 = self.x
+                self.y2 = self.y
+                print(5)
+                pass
+
+
 
     def create_plot3(self):
         self.g3_par1 = self.dSB_par31.value()
@@ -157,16 +197,24 @@ class MainWindow(QtWidgets.QMainWindow, main_win.Ui_MainWindow):
         self.g3_max = self.dSB_max3.value()
         self.g3_coeff = self.dSB_coeff3.value()
         self.g3_step = self.dSB_step3.value()
-        self.x = np.arange(self.g3_min, self.g3_max, self.g3_step)
-        self.y = []
-        for m in self.x:
-            a = m ** 4
-            self.y.append(a)
-        self.widget3_layout.draw_graph(self.x, self.y)
-        self.x3 = self.x
-        self.y3 = self.y
-        print(6)
-        pass
+        if self.g3_min == self.g3_max:
+            pass
+        else:
+            if self.g3_step == 0:
+                pass
+            else:
+                self.x = np.arange(self.g3_min, self.g3_max, self.g3_step)
+                self.y = []
+                for m in self.x:
+                    a = m ** 4
+                    self.y.append(a)
+                self.widget3_layout.draw_graph(self.x, self.y)
+                self.x3 = self.x
+                self.y3 = self.y
+                print(6)
+                pass
+
+
 
 
 if __name__ == '__main__':  # Если мы запускаем файл напрямую, а не импортируем
