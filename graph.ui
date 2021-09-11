@@ -81,7 +81,17 @@
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="text">
-                   <string> Параметр 3</string>
+                   <string>Радиус лампы, мм</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QDoubleSpinBox" name="dSB_par12">
+                  <property name="maximumSize">
+                   <size>
+                    <width>129</width>
+                    <height>30</height>
+                   </size>
                   </property>
                  </widget>
                 </item>
@@ -97,22 +107,12 @@
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="text">
-                   <string> Параметр 1</string>
+                   <string>Давление, мм.рт.ст.</string>
                   </property>
                  </widget>
                 </item>
                 <item row="2" column="1">
                  <widget class="QDoubleSpinBox" name="dSB_par13">
-                  <property name="maximumSize">
-                   <size>
-                    <width>129</width>
-                    <height>30</height>
-                   </size>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QDoubleSpinBox" name="dSB_par12">
                   <property name="maximumSize">
                    <size>
                     <width>129</width>
@@ -129,8 +129,14 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="decimals">
+                   <number>5</number>
+                  </property>
+                  <property name="maximum">
+                   <double>10.000000000000000</double>
+                  </property>
                   <property name="value">
-                   <double>99.000000000000000</double>
+                   <double>0.000000000000000</double>
                   </property>
                  </widget>
                 </item>
@@ -146,8 +152,83 @@
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="text">
-                   <string> Параметр 2</string>
+                   <string>Длина нити, мм</string>
                   </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QComboBox" name="cBox_g1_par1">
+                  <property name="maximumSize">
+                   <size>
+                    <width>50</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>-5</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>-4</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>-3</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>-2</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>-1</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>1</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>3</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>4</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>5</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>6</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>7</string>
+                   </property>
+                  </item>
                  </widget>
                 </item>
                </layout>
@@ -166,7 +247,7 @@
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="text">
-                   <string> Максимум</string>
+                   <string> Максимум, °C</string>
                   </property>
                  </widget>
                 </item>
@@ -177,6 +258,12 @@
                     <width>129</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="decimals">
+                   <number>4</number>
+                  </property>
+                  <property name="maximum">
+                   <double>999.999900000000025</double>
                   </property>
                  </widget>
                 </item>
@@ -192,7 +279,7 @@
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="text">
-                   <string> Минимум</string>
+                   <string> Минимум, °C</string>
                   </property>
                  </widget>
                 </item>
@@ -220,6 +307,15 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="decimals">
+                   <number>4</number>
+                  </property>
+                  <property name="maximum">
+                   <double>1001.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>10.000000000000000</double>
+                  </property>
                  </widget>
                 </item>
                 <item row="2" column="1">
@@ -229,6 +325,12 @@
                     <width>129</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="maximum">
+                   <double>1000.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>97.670000000000002</double>
                   </property>
                  </widget>
                 </item>
@@ -249,7 +351,14 @@
                  </widget>
                 </item>
                 <item row="3" column="1">
-                 <widget class="QDoubleSpinBox" name="dSB_step1"/>
+                 <widget class="QDoubleSpinBox" name="dSB_step1">
+                  <property name="decimals">
+                   <number>4</number>
+                  </property>
+                  <property name="value">
+                   <double>1.000000000000000</double>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </item>
@@ -275,11 +384,17 @@
                  <layout class="QHBoxLayout" name="horizontalLayout_2">
                   <item>
                    <layout class="QGridLayout" name="gridLayout_4">
-                    <item row="0" column="0">
-                     <widget class="QLabel" name="l_arg1">
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="l_val_1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>60</width>
+                        <height>20</height>
+                       </size>
+                      </property>
                       <property name="maximumSize">
                        <size>
-                        <width>47</width>
+                        <width>60</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -287,7 +402,29 @@
                        <string notr="true">background-color: rgb(255, 255, 255);</string>
                       </property>
                       <property name="text">
-                       <string>Арг.</string>
+                       <string>Мощн. Вт</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="l_arg1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>60</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>60</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
+                      <property name="text">
+                       <string>Темп. К</string>
                       </property>
                      </widget>
                     </item>
@@ -305,13 +442,63 @@
                         <height>20</height>
                        </size>
                       </property>
+                      <property name="decimals">
+                       <number>4</number>
+                      </property>
+                      <property name="maximum">
+                       <double>1001.000000000000000</double>
+                      </property>
                      </widget>
                     </item>
-                    <item row="1" column="0">
-                     <widget class="QLabel" name="l_val_1">
+                    <item row="1" column="1">
+                     <widget class="QLineEdit" name="lE_val1">
                       <property name="maximumSize">
                        <size>
-                        <width>47</width>
+                        <width>130</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="l_val_12">
+                      <property name="minimumSize">
+                       <size>
+                        <width>60</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>60</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);
+
+
+</string>
+                      </property>
+                      <property name="text">
+                       <string>Ток, А</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QLabel" name="l_val_13">
+                      <property name="minimumSize">
+                       <size>
+                        <width>60</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>60</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -319,12 +506,25 @@
                        <string notr="true">background-color: rgb(255, 255, 255);</string>
                       </property>
                       <property name="text">
-                       <string>Знач.</string>
+                       <string>Напр. В</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="1" column="1">
-                     <widget class="QLineEdit" name="lE_val1">
+                    <item row="2" column="1">
+                     <widget class="QLineEdit" name="lE_val12">
+                      <property name="maximumSize">
+                       <size>
+                        <width>130</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="1">
+                     <widget class="QLineEdit" name="lE_val13">
                       <property name="maximumSize">
                        <size>
                         <width>130</width>
@@ -421,7 +621,8 @@
                <number>1</number>
               </property>
               <property name="styleSheet">
-               <string notr="true">background-color: rgb(255, 255, 127);</string>
+               <string notr="true">background-color: rgb(255, 255, 127);
+background-color: rgb(0, 0, 0);</string>
               </property>
              </widget>
             </item>
@@ -448,7 +649,7 @@
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="text">
-                   <string> Параметр 3</string>
+                   <string>Радиус лампы, мм</string>
                   </property>
                  </widget>
                 </item>
@@ -464,17 +665,7 @@
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="text">
-                   <string> Параметр 1</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="1">
-                 <widget class="QDoubleSpinBox" name="dSB_par23">
-                  <property name="maximumSize">
-                   <size>
-                    <width>129</width>
-                    <height>30</height>
-                   </size>
+                   <string>Давление, мм.рт.ст.</string>
                   </property>
                  </widget>
                 </item>
@@ -486,10 +677,29 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="decimals">
+                   <number>2</number>
+                  </property>
                  </widget>
                 </item>
                 <item row="0" column="1">
                  <widget class="QDoubleSpinBox" name="dSB_par21">
+                  <property name="maximumSize">
+                   <size>
+                    <width>129</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="decimals">
+                   <number>5</number>
+                  </property>
+                  <property name="maximum">
+                   <double>10.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QDoubleSpinBox" name="dSB_par23">
                   <property name="maximumSize">
                    <size>
                     <width>129</width>
@@ -510,7 +720,101 @@
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="text">
-                   <string> Параметр 2</string>
+                   <string>Длина нити, мм</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QComboBox" name="cBox_g2_par1">
+                  <property name="maximumSize">
+                   <size>
+                    <width>50</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>-5</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>-4</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>-3</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>-2</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>-1</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>1</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>3</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>4</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>5</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label23_temp">
+                  <property name="maximumSize">
+                   <size>
+                    <width>130</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>Темп. окр. среды, К</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QDoubleSpinBox" name="dSB_par23_temp">
+                  <property name="maximumSize">
+                   <size>
+                    <width>129</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximum">
+                   <double>1000.000000000000000</double>
                   </property>
                  </widget>
                 </item>
@@ -526,6 +830,9 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="maximum">
+                   <double>1000.000000000000000</double>
+                  </property>
                  </widget>
                 </item>
                 <item row="1" column="1">
@@ -535,6 +842,12 @@
                     <width>129</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="decimals">
+                   <number>4</number>
+                  </property>
+                  <property name="maximum">
+                   <double>1001.000000000000000</double>
                   </property>
                  </widget>
                 </item>
@@ -550,7 +863,7 @@
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="text">
-                   <string> Минимум</string>
+                   <string> Минимум, °C</string>
                   </property>
                  </widget>
                 </item>
@@ -566,7 +879,7 @@
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
                   <property name="text">
-                   <string> Максимум</string>
+                   <string> Максимум, °C</string>
                   </property>
                  </widget>
                 </item>
@@ -577,6 +890,12 @@
                     <width>129</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="decimals">
+                   <number>4</number>
+                  </property>
+                  <property name="maximum">
+                   <double>1000.000000000000000</double>
                   </property>
                  </widget>
                 </item>
@@ -613,7 +932,11 @@
                  </widget>
                 </item>
                 <item row="3" column="1">
-                 <widget class="QDoubleSpinBox" name="dSB_step2"/>
+                 <widget class="QDoubleSpinBox" name="dSB_step2">
+                  <property name="decimals">
+                   <number>4</number>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </item>
@@ -641,9 +964,15 @@
                    <layout class="QGridLayout" name="gridLayout_7">
                     <item row="0" column="0">
                      <widget class="QLabel" name="l_arg2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>60</width>
+                        <height>0</height>
+                       </size>
+                      </property>
                       <property name="maximumSize">
                        <size>
-                        <width>47</width>
+                        <width>60</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -651,7 +980,7 @@
                        <string notr="true">background-color: rgb(255, 255, 255);</string>
                       </property>
                       <property name="text">
-                       <string>Арг.</string>
+                       <string>Темп. К</string>
                       </property>
                      </widget>
                     </item>
@@ -669,13 +998,19 @@
                         <height>20</height>
                        </size>
                       </property>
+                      <property name="decimals">
+                       <number>4</number>
+                      </property>
+                      <property name="maximum">
+                       <double>1001.000000000000000</double>
+                      </property>
                      </widget>
                     </item>
                     <item row="1" column="0">
                      <widget class="QLabel" name="l_val_2">
                       <property name="maximumSize">
                        <size>
-                        <width>47</width>
+                        <width>60</width>
                         <height>20</height>
                        </size>
                       </property>
@@ -683,12 +1018,70 @@
                        <string notr="true">background-color: rgb(255, 255, 255);</string>
                       </property>
                       <property name="text">
-                       <string>Знач.</string>
+                       <string>Мощн. Вт</string>
                       </property>
                      </widget>
                     </item>
                     <item row="1" column="1">
                      <widget class="QLineEdit" name="lE_val2">
+                      <property name="maximumSize">
+                       <size>
+                        <width>130</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="l_val_22">
+                      <property name="maximumSize">
+                       <size>
+                        <width>60</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
+                      <property name="text">
+                       <string>Ток, А</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QLabel" name="l_val_23">
+                      <property name="maximumSize">
+                       <size>
+                        <width>60</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
+                      <property name="text">
+                       <string>Напр. В</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QLineEdit" name="lE_val22">
+                      <property name="maximumSize">
+                       <size>
+                        <width>130</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="1">
+                     <widget class="QLineEdit" name="lE_val23">
                       <property name="maximumSize">
                        <size>
                         <width>130</width>
@@ -785,7 +1178,9 @@
                <number>1</number>
               </property>
               <property name="styleSheet">
-               <string notr="true">background-color: rgb(255, 255, 127);</string>
+               <string notr="true">
+background-color: rgb(255, 255, 127);
+background-color: rgb(0, 0, 0);</string>
               </property>
              </widget>
             </item>

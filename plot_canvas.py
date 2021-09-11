@@ -28,48 +28,50 @@ class Layout(QVBoxLayout):
         # self.addWidget(self.toolbar)
         self.addWidget(self.canvas)
 
-    def draw_graph(self, x1, y1):
-        try:
-            xlabel = 8
-            ylabel = 8
-            xlabelpad = 0
-            ylabelpad = xlabelpad
-            #
-            self.figure.clear()
-            #
-            self.ax1 = self.figure.add_subplot(211)
-            self.ax2 = self.figure.add_subplot(223)
-            self.ax3 = self.figure.add_subplot(224)
-            #
-            self.ax1.plot(x1, y1)
-            #
-            #self.ax1.xaxis.set_major_locator(ticker.MultipleLocator(2))
-            #self.ax1.xaxis.set_minor_locator(ticker.MultipleLocator(1))
-            #self.ax1.yaxis.set_major_locator(ticker.MultipleLocator(50))
-            #self.ax1.yaxis.set_minor_locator(ticker.MultipleLocator(10))
-            #
-            self.ax1.tick_params(labelsize=6)
-            self.ax1.set_xlabel('Ось X', fontsize=xlabel, labelpad=xlabelpad)
-            self.ax1.set_ylabel('Ось Y', fontsize=ylabel, labelpad=ylabelpad)
-            self.ax1.spines['right'].set_visible(False)
-            self.ax1.grid(color='black', linewidth=1, linestyle='--')
-            #
-            #self.ax1.plot(x1, y1)
-            self.ax2.tick_params(labelsize=6)
-            self.ax2.set_xlabel('Ось X', fontsize=xlabel, labelpad=xlabelpad)
-            self.ax2.set_ylabel('Ось Y', fontsize=ylabel, labelpad=ylabelpad)
-            self.ax2.spines['right'].set_visible(False)
-            self.ax2.grid(color='black', linewidth=1, linestyle='--')
-            #
-            #self.ax1.plot(x1, y1)
-            self.ax3.tick_params(labelsize=6)
-            self.ax3.set_xlabel('Ось X', fontsize=xlabel, labelpad=xlabelpad)
-            self.ax3.set_ylabel('Ось Y', fontsize=ylabel, labelpad=ylabelpad)
-            self.ax3.spines['right'].set_visible(False)
-            self.ax3.grid(color='black', linewidth=1, linestyle='--')
-            self.canvas.draw()
-        except Exception as error:
-            print("Поймано исключение " + str(error))
+    def draw_graphs(self, x1, y1, y2, y3):
+        # try:
+        xlabel = 8
+        ylabel = 8
+        xlabelpad = 0
+        ylabelpad = xlabelpad
+        #
+        self.figure.clear()
+        #
+        self.ax1 = self.figure.add_subplot(211)
+        self.ax2 = self.figure.add_subplot(223)
+        self.ax3 = self.figure.add_subplot(224)
+        #
+        self.ax1.plot(x1, y1)
+        self.ax2.plot(x1, y2)
+        self.ax3.plot(x1, y3)
+        #
+        #self.ax1.xaxis.set_major_locator(ticker.MultipleLocator(2))
+        #self.ax1.xaxis.set_minor_locator(ticker.MultipleLocator(1))
+        #self.ax1.yaxis.set_major_locator(ticker.MultipleLocator(50))
+        #self.ax1.yaxis.set_minor_locator(ticker.MultipleLocator(10))
+        #
+        self.ax1.tick_params(labelsize=6)
+        self.ax1.set_xlabel('Разница температур, К', fontsize=xlabel, labelpad=xlabelpad)
+        self.ax1.set_ylabel('Мощность, Вт', fontsize=ylabel, labelpad=ylabelpad)
+        self.ax1.spines['right'].set_visible(False)
+        self.ax1.grid(color='black', linewidth=1, linestyle='--')
+        #
+        #self.ax1.plot(x1, y1)
+        self.ax2.tick_params(labelsize=6)
+        self.ax2.set_xlabel('Разница температур, К', fontsize=xlabel, labelpad=xlabelpad)
+        self.ax2.set_ylabel('Силв тока, А', fontsize=ylabel, labelpad=ylabelpad)
+        self.ax2.spines['right'].set_visible(False)
+        self.ax2.grid(color='black', linewidth=1, linestyle='--')
+        #
+        #self.ax1.plot(x1, y1)
+        self.ax3.tick_params(labelsize=6)
+        self.ax3.set_xlabel('Разница температур, К', fontsize=xlabel, labelpad=xlabelpad)
+        self.ax3.set_ylabel('Напряжение, В', fontsize=ylabel, labelpad=ylabelpad)
+        self.ax3.spines['right'].set_visible(False)
+        self.ax3.grid(color='black', linewidth=1, linestyle='--')
+        self.canvas.draw()
+        # except Exception as error:
+            # print("Поймано исключение " + str(error))
 
 
 
